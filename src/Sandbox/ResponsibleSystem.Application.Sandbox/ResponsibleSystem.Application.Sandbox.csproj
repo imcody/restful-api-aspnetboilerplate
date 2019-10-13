@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>ResponsibleSystem.Sandbox</AssemblyName>
+    <PackageId>ResponsibleSystem.Application.Sandbox</PackageId>
+    <RootNamespace>ResponsibleSystem.Sandbox</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>FEATURE_SIGNALR_ASPNETCORE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ResponsibleSystem.Application\ResponsibleSystem.Application.csproj" />
+    <ProjectReference Include="..\..\ResponsibleSystem.Common\ResponsibleSystem.Common.csproj" />
+    <ProjectReference Include="..\..\ResponsibleSystem.Core\ResponsibleSystem.Core.csproj" />
+    <ProjectReference Include="..\..\ResponsibleSystem.EntityFrameworkCore\ResponsibleSystem.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

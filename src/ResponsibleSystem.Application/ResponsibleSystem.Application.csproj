@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>ResponsibleSystem.Application</AssemblyName>
+    <PackageId>ResponsibleSystem.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>ResponsibleSystem</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>FEATURE_SIGNALR_ASPNETCORE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="DataMigrations\Domain\**" />
+    <EmbeddedResource Remove="DataMigrations\Domain\**" />
+    <None Remove="DataMigrations\Domain\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Sendgrid" Version="9.10.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ResponsibleSystem.Common\ResponsibleSystem.Common.csproj" />
+    <ProjectReference Include="..\ResponsibleSystem.Core\ResponsibleSystem.Core.csproj" />
+    <ProjectReference Include="..\ResponsibleSystem.EntityFrameworkCore\ResponsibleSystem.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Abp.Web.Api">
+      <HintPath>..\..\..\..\..\Users\Adam\.nuget\packages\abp.web.api\4.5.0\lib\net461\Abp.Web.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
